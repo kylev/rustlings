@@ -6,8 +6,15 @@
     "configurations": [
         {
             "type": "lldb",
+            "request": "launch",
+            "name": "Run 'rustlings watch'",
+            "program": "${workspaceFolder}/target/debug/rustlings",
+            "args": ["watch"]
+        },
+        {
+            "type": "lldb",
             "request": "attach",
-            "name": "Attach to rustlings",
+            "name": "Attach to 'rustlings'",
             "program": "${workspaceFolder}/target/debug/rustlings",
             "waitFor": true
         }
