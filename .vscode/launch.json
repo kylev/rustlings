@@ -1,0 +1,28 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Run 'rustlings'",
+            "cargo": {
+                "args": ["build"]
+            },
+            "args": ["watch"]
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Launch 'rustlings watch'",
+            "program": "${workspaceFolder}/target/debug/rustlings",
+            "args": ["watch"]
+        },
+        {
+            "type": "lldb",
+            "request": "attach",
+            "name": "Attach to 'rustlings'",
+            "program": "${workspaceFolder}/target/debug/rustlings",
+            "waitFor": true
+        }
+    ]
+}
